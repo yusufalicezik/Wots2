@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.KayitOlSetupActivity"
+    android:background="@color/loginArkaplan">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="150dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/etIsim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/login_edittext_arkaplan"
+            android:drawableLeft="@drawable/ic_person2"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:fontFamily="@font/audiowide"
+            android:hint="İsim"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@color/griBeyaz"
+            android:textColorHint="@color/griBeyaz"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="192dp" />
+
+
+        <EditText
+            android:id="@+id/etSoyisim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/login_edittext_arkaplan"
+            android:drawableLeft="@drawable/family"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:fontFamily="@font/audiowide"
+            android:hint="Soyisim"
+            android:inputType="text"
+            android:padding="14dp"
+            android:textColor="@color/griBeyaz"
+            android:textColorHint="@color/griBeyaz"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="192dp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etKullaniciAdi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/login_edittext_arkaplan"
+        android:drawableLeft="@drawable/et2"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:fontFamily="@font/audiowide"
+        android:hint="Kullanıcı Adı"
+        android:inputType="textPersonName"
+        android:padding="14dp"
+        android:textColor="@color/griBeyaz"
+        android:textColorHint="@color/griBeyaz"
+        app:layout_constraintEnd_toEndOf="@+id/linear"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linear"
+        app:layout_constraintTop_toBottomOf="@+id/linear" />
+
+    <EditText
+        android:id="@+id/etBiografi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/login_edittext_arkaplan"
+        android:drawableLeft="@drawable/ic_bio"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:fontFamily="@font/audiowide"
+        android:hint="Biyografi"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="@color/griBeyaz"
+        android:textColorHint="@color/griBeyaz"
+        app:layout_constraintEnd_toEndOf="@+id/etKullaniciAdi"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etKullaniciAdi"
+        app:layout_constraintTop_toBottomOf="@+id/etKullaniciAdi" />
+
+    <Button
+        android:id="@+id/ileriButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/login_buton_arkaplan"
+        android:fontFamily="@font/audiowide"
+        android:onClick="ileriButonTik"
+        android:padding="10dp"
+        android:text="ileri"
+        android:textAllCaps="false"
+        android:textColor="@color/griBeyaz"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/etBiografi"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toTopOf="@+id/imageButton3" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/login_buton_arkaplan"
+        android:onClick="geriButonTik"
+        app:layout_constraintStart_toStartOf="@+id/etBiografi"
+        app:layout_constraintTop_toBottomOf="@+id/etBiografi"
+        app:srcCompat="@drawable/ic_geri_arrow" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/audiowide"
+        android:text="2/2"
+        android:textColor="@color/logoTuruncusu"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ileriButton" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="12dp"
+
+    android:layout_width="match_parent"
+    android:background="@color/Solukbeyaz3"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/post_circle_profil_resmi"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_person"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/post_tvIsimSoyisim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/audiowide"
+        android:text="Yusuf Ali Çezik"
+        android:textColor="@color/golgelik"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/post_circle_profil_resmi"
+        app:layout_constraintStart_toEndOf="@+id/post_circle_profil_resmi"
+        app:layout_constraintTop_toTopOf="@+id/post_circle_profil_resmi" />
+
+    <TextView
+        android:id="@+id/post_tvKacDkOnce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="1 g önce"
+        android:textColor="@color/golgelik"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/post_tvIsimSoyisim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/post_tvIsimSoyisim" />
+
+    <TextView
+        android:id="@+id/post_tvAciklama"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/audiowide"
+        android:paddingLeft="5dp"
+        android:text="Fotoğraf hakkında açıklama"
+        android:textAlignment="textStart"
+        android:textColor="@color/golgelik2"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_circle_profil_resmi" />
+
+    <com.yusufalicezik.wots.Utils.GridImageView
+        android:id="@+id/post_imgPostFoto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+
+
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_tvAciklama"
+        app:srcCompat="@drawable/androidicon" />
+
+    <ImageView
+        android:id="@+id/post_imgLike"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/post_imgPostFoto"
+        app:layout_constraintTop_toBottomOf="@+id/post_imgPostFoto"
+        app:srcCompat="@drawable/ic_like" />
+
+    <ImageView
+        android:id="@+id/post_imgComment"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/post_imgLike"
+        app:layout_constraintStart_toEndOf="@+id/post_imgLike"
+        app:layout_constraintTop_toBottomOf="@+id/post_imgPostFoto"
+        app:srcCompat="@drawable/ic_comment" />
+
+    <TextView
+        android:id="@+id/post_tvBegenmeSayisi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="1 beğenme"
+        android:textColor="@color/golgelik2"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/post_imgLike"
+        app:layout_constraintTop_toBottomOf="@+id/post_imgLike" />
+
+
+</android.support.constraint.ConstraintLayout>

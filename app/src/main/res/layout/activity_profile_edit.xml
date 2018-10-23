@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile.ProfileEditActivity"
+    android:background="@color/loginArkaplan">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></include>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profDuzenleFoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/buton_bordered_arkaplan"
+        android:fontFamily="@font/audiowide"
+
+        android:onClick="izinIste"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Fotoğrafı Düzenle"
+        android:textAllCaps="false"
+        android:textColor="@color/logoTuruncusuOpacYazi2"
+        app:layout_constraintEnd_toEndOf="@+id/profDuzenleFoto"
+        app:layout_constraintStart_toStartOf="@+id/profDuzenleFoto"
+        app:layout_constraintTop_toBottomOf="@+id/profDuzenleFoto" />
+
+    <EditText
+        android:id="@+id/profilDuzenleIsimSoyisim"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/beyaz_cizgi_border"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/griBeyaz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <EditText
+        android:id="@+id/profilDuzenleBio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/beyaz_cizgi_border"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/griBeyaz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilDuzenleIsimSoyisim" />
+
+    <EditText
+        android:id="@+id/profilDuzenleSifre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/beyaz_cizgi_border"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/griBeyaz"
+        app:layout_constraintEnd_toEndOf="@+id/profilDuzenleBio"
+        app:layout_constraintStart_toStartOf="@+id/profilDuzenleBio"
+        app:layout_constraintTop_toBottomOf="@+id/profilDuzenleBio" />
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="32dp"
+        android:background="@drawable/login_buton_arkaplan"
+        android:onClick="yeniVerileriKaydet"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/profilDuzenleSifre"
+        app:layout_constraintStart_toStartOf="@+id/profilDuzenleSifre"
+        app:layout_constraintTop_toBottomOf="@+id/profilDuzenleSifre"
+        app:srcCompat="@drawable/ic_tik" />
+
+    <ProgressBar
+        android:id="@+id/profileDuzenleProgress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/profDuzenleFoto"
+        app:layout_constraintStart_toStartOf="@+id/profDuzenleFoto"
+        app:layout_constraintTop_toTopOf="@+id/profDuzenleFoto" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/audiowide"
+        android:onClick="cikisYapTik"
+        android:text="Çıkış Uap"
+        android:textColor="@color/golgelik2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+</android.support.constraint.ConstraintLayout>

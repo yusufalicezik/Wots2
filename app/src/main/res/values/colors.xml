@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d46e2f</color>
+    <color name="colorPrimaryDark">#9b5429</color>
+    <color name="colorAccent">#c9c9c9</color>
+    <color name="beyaz">#ffffff</color>
+    <color name="loginArkaplan">#424242</color>
+    <color name="logoTuruncusu">#d46e2f</color>
+    <color name="logoTuruncusuDark">#b95415</color>
+    <color name="golgelik">#565656</color>
+    <color name="golgelik2">#9e9b9b</color>
+    <color name="griBeyaz">#c9c9c9</color>
+    <color name="golgelik3">#f1ecec</color>
+    <color name="logoTuruncusuOpac">#cc151616</color>
+    <color name="logoTuruncusuOpacYazi">#f9e76a1d</color>
+    <color name="logoTuruncusuOpacYazi2">#a6e76a1d</color>
+    <color name="Solukbeyaz">#9fffffff</color>
+    <color name="Solukbeyaz3">#46cecaca</color>
+    <color name="Solukbeyaz2">#b2ffffff</color>
+</resources>
