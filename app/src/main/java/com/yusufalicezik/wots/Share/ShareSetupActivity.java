@@ -135,4 +135,15 @@ public class ShareSetupActivity extends AppCompatActivity {
         UniversalImagLoader universalImageLoader = new UniversalImagLoader(getApplicationContext());
         ImageLoader.getInstance().init(universalImageLoader.getConfig());
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+        finish();
+
+    }
 }

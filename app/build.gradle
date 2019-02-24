@@ -43,6 +43,8 @@ dependencies {
     implementation 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
     implementation 'com.firebaseui:firebase-ui-database:4.2.0'
 
+    implementation 'com.google.firebase:firebase-messaging:17.1.0'
+
 }
 
 apply plugin: 'com.google.gms.google-services'

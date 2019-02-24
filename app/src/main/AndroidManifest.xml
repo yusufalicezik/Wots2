@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -36,9 +38,17 @@
         <activity android:name=".Search.SearchActivity" />
         <activity android:name=".Share.ShareActivity" />
         <activity android:name=".Share.ShareSetupActivity" />
-        <activity android:name=".Search.SearchTikProfileActivity"></activity>
+        <activity android:name=".Search.SearchTikProfileActivity" />
         <activity android:name=".Message.MessagesGenelActivity" />
-        <activity android:name=".Message.MessagesPersonActivity"></activity>
+        <activity android:name=".Message.MessagesPersonActivity" />
+
+        <service
+            android:name=".Services.BildirimServisi"
+            android:exported="false" />
+        <service
+            android:name=".Services.FirebaseService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

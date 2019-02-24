@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -57,7 +58,7 @@ public class SearchActivity extends AppCompatActivity {
 
         searchResultList=findViewById(R.id.searchRecyclerListe);
         searchResultList.setHasFixedSize(true);
-        searchResultList.setLayoutManager(new LinearLayoutManager(this));
+        searchResultList.setLayoutManager(new LinearLayoutManager(SearchActivity.this));
 
 
         searchButton=findViewById(R.id.searchButton);
@@ -147,7 +148,7 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     private void UniversalInit() {
-        UniversalImagLoader universalImageLoader = new UniversalImagLoader(getApplicationContext());
+        UniversalImagLoader universalImageLoader = new UniversalImagLoader(SearchActivity.this);
         ImageLoader.getInstance().init(universalImageLoader.getConfig());
     }
 
@@ -159,7 +160,7 @@ public class SearchActivity extends AppCompatActivity {
         BottomNavigationViewEx bottomNavigationViewEx=findViewById(R.id.bottomNavigationView);
 
         BottomNavigationViewHelper bottomNavigationViewHepler=new BottomNavigationViewHelper(bottomNavigationViewEx);
-        bottomNavigationViewHepler.setupNavigation(getApplicationContext(),bottomNavigationViewEx);
+        bottomNavigationViewHepler.setupNavigation(SearchActivity.this,bottomNavigationViewEx);
 
         Menu menu=bottomNavigationViewEx.getMenu();
         MenuItem menuItem=menu.getItem(ACTIVITY_NO);

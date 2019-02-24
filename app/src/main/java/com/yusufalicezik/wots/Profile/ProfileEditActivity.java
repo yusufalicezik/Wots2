@@ -118,12 +118,22 @@ public class ProfileEditActivity extends AppCompatActivity {
 
     private void kullaniciVerileriniGetir() {
 
-        //Toast.makeText(this, "ddd"+kullanici.getIsim_soyisim(), Toast.LENGTH_SHORT).show();
-        bio.setText(kullanici.getUser_details().getBiography());
-        isimSoyisim.setText(kullanici.getIsim_soyisim());
-        sifre.setText(kullanici.getPassword());
-        UniversalImagLoader.setImage(kullanici.getUser_details().getProfile_picture(),profilResim,progressBar,"");
 
+        if(kullanici!=null) {
+
+            //Toast.makeText(this, "ddd"+kullanici.getIsim_soyisim(), Toast.LENGTH_SHORT).show();
+            bio.setText(kullanici.getUser_details().getBiography());
+            isimSoyisim.setText(kullanici.getIsim_soyisim());
+            sifre.setText(kullanici.getPassword());
+            UniversalImagLoader.setImage(kullanici.getUser_details().getProfile_picture(), profilResim, progressBar, "");
+        }
+        else {
+            Intent intent=new Intent(this,ProfileActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivity(intent);
+            finish();
+        }
 
     }
 

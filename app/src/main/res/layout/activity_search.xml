@@ -34,7 +34,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/search_arkaplan"
+
         android:drawableLeft="@drawable/ic_search"
         android:drawablePadding="10dp"
         android:ems="10"
